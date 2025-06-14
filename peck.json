@@ -1,0 +1,13 @@
+{
+    "preset": "laravel",
+    "ignore": {
+        "words": [
+            "php",
+            "ol",
+            "li",
+            "renderer",
+            "commonmark"
+        ],
+        "paths": []
+    }
+}

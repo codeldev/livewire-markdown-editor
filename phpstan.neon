@@ -1,0 +1,21 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+    - vendor/nesbot/carbon/extension.neon
+
+parameters:
+    level: max
+
+    paths:
+        - src
+        - config
+
+    excludePaths:
+        - resources/*
+        - tests/*
+
+    ignoreErrors:
+        - '#^Called ''env'' outside of the config directory which returns null when the config is cached, use ''config''\.$#'
+        # Only ignore view-string error if it exists (won't cause issues if pattern doesn't match)
+        -
+            message: '#Parameter.*view.*expects view-string.*string given#'
+            reportUnmatched: false
